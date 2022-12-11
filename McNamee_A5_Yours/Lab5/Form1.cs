@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -95,7 +95,7 @@ namespace Lab5
         {
             if (radText.Checked)
             {
-                grpText.Show()
+                grpText.Show();
                 ResetStatsGrp();
                 grpStats.Hide();
                 this.AcceptButton = btnJoin;
@@ -138,7 +138,7 @@ namespace Lab5
             stringFirst = txtString1.Text;
             stringSecond = txtString2.Text;
 
-            string storage = txtString1;
+            string storage = txtString1.Text;
             stringFirst = txtString2.Text;
             stringSecond = storage;
 
@@ -164,7 +164,7 @@ namespace Lab5
         private void chkSwap_CheckedChanged(object sender, EventArgs e)
         {
             bool check = CheckInput();
-            if(check=true) 
+            if(check==true) 
             {
                 string stringFirst = txtString1.Text;
                 string stringSecond = txtString2.Text;
@@ -225,7 +225,7 @@ namespace Lab5
                 {
                     odd++;
                 }
-               
+                count++;
             } while (count<lstNumbers.Items.Count);
             return odd;
         }
